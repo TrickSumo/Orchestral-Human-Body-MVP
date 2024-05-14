@@ -1,0 +1,35 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  z-index: 1000; /* High z-index to ensure it is on top */
+}
+
+.modal {
+  padding: 15px;
+  margin-top: 15vh;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 341px;
+  height: 466px;
+  position: absolute;
+  color: #000;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px; /* Adjust as needed for exact positioning */
+  right: 15px; /* Adjust as needed for exact positioning */
+  border: none;
+  background: none;
+  font-size: 24px; /* Larger close button, adjust as needed */
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.boot-menu-container {
+  background: url("../assets/boot-menu-bg.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.boot-text {
+  font-family: "Roboto";
+  /* font-style: normal; */
+  /* font-weight: 400; */
+  font-size: 39px;
+  /* line-height: 100%; */
+  /* display: flex; */
+  /* align-items: center; */
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #f3efe4;
+  margin-top: 15vh;
+}

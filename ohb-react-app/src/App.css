@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ttt-container {
+  background: linear-gradient(
+      184.35deg,
+      rgba(0, 0, 0, 0.08) 56.43%,
+      rgba(0, 0, 0, 0.64) 71.19%
+    ),
+    url(../background_app.jpeg) no-repeat center center/cover
+      /* url("../background_app.jpeg") no-repeat center center/cover */;
+  height: 100vh;
+}
