@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Loader from "./Loader";
 
 // Keyframes
-const buttonVarients = {
+const buttonVariants = {
   visible: {
     x: [0, -20, 20, -20, 20, 0],
     transition: {
@@ -56,7 +56,7 @@ const Home = () => {
           //   padding: "1rem 3rem",
           //   backgroundColor: "#ff299",
           // }}
-          variants={buttonVarients}
+          variants={buttonVariants}
           animate="visible"
           whileHover="hover"
         >

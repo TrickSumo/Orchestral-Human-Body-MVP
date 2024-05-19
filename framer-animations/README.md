@@ -50,7 +50,7 @@ transition={{
   For neat and clean code
   To propagate animation attributes down through the DOM
 
-const containerVarients = {
+const containerVariants = {
 hidden: {
 opacity: 0,
 x: "100vw",
@@ -67,7 +67,7 @@ transition: { delay: 0.3 },
       // initial={{ x: "100vw" }}
       // animate={{ x: "0" }}
       // transition={{ delay: 0.3 }}
-      variants={containerVarients}
+      variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
@@ -79,9 +79,9 @@ transition: { delay: 0.3 },
           className="next"
         >
 
-Another example of varients:-
+Another example of Variants:-
 
-const containerVarients = {
+const containerVariants = {
 hidden: {
 opacity: 0,
 x: "100vw",
@@ -103,7 +103,7 @@ staggerChildren: 0.4,
 - Keyframes can be passed as an array
 
 // Keyframes
-const buttonVarients = {
+const buttonVariants = {
 visible: {
 x: [0, -20, 20, -20, 20, 0],
 transition: {
@@ -150,7 +150,7 @@ boxShadow: "0px 0px 8px rgb(255, 255, 255)",
 - Animating SVGs
 
         <motion.svg
-          variants={svgVarients}
+          variants={svgVariants}
           initial="hidden"
           animate="visible"
           className="pizza-svg"
@@ -158,7 +158,7 @@ boxShadow: "0px 0px 8px rgb(255, 255, 255)",
           viewBox="0 0 100 100"
         >
           <motion.path
-            variants={pathVarients}
+            variants={pathVariants}
             fill="none"
 
 - useCycle()

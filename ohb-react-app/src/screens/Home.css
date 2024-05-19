@@ -6,14 +6,46 @@
     ),
     url(../background_app.jpeg) no-repeat center center/cover
       /* url("../background_app.jpeg") no-repeat center center/cover */;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100dvh;
   /* position: relative; */
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 15vh;
+  padding-bottom: 3vh;
+  gap: 1.8vh;
+  overflow-y: hidden;
+}
+
+.currentEvent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9vh;
+  align-items: center;
+}
+
+.currentEventName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3vw;
+}
+
+.currentEventIcon {
+  filter: invert(100%) brightness(100%);
+}
+
+.currentEventTime {
+  margin-bottom: 3vh;
+}
+
+.controls {
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero-btn {
@@ -23,12 +55,8 @@
   width: 90%;
   border-radius: 22px;
   line-height: 28px;
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   border: none;
-  background: rgba(7, 142, 161, 0.65);
+  /* background: rgba(7, 142, 161, 0.65); */
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 22px;
 }
@@ -41,50 +69,65 @@
   color: #f3efe4;
 }
 
-.hero-btn:hover {
+.bg-hero-btn-heavenlyEssense {
+  background: rgba(7, 142, 161, 0.65);
+}
+.bg-hero-btn-heavenlyEssense:hover {
   background: #2da7b7a6;
 }
 
-/* .play-img {
-  position: absolute;
-  left: 29.17%;
-  right: 20.83%;
-  top: 16.67%;
-  bottom: 16.67%;
-} */
-
-.controls {
-  min-width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.bg-hero-btn-greenExpedition {
+  background: rgba(52, 204, 160, 0.65);
 }
-/*
-.hero-btn {
-  background: rgba(7, 142, 161, 0.65);
+
+.bg-hero-btn-greenExpedition:hover {
+  background: #2db58d;
+}
+
+/* .bg-hero-btn-magicWoodland {
+  background: linear-gradient(
+    83.09deg,
+    rgba(233, 103, 98, 0.85) 30.69%,
+    rgba(252, 186, 151, 0.85) 83.49%
+  );
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  padding: 20px;
-  text-align: center;
-  width: 80%;
-
-  font-family: "Roboto";
-  font-weight: 700px;
-  font-size: 20px;
-  line-height: 28px;
-  color: #f3efe4;
+}
+.bg-hero-btn-coreHarmony {
+  background: linear-gradient(
+    83.09deg,
+    rgba(221, 66, 100, 0.85) 30.69%,
+    rgba(251, 146, 158, 0.85) 83.49%
+  );
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bg-hero-btn-findYourBliss {
+  background: linear-gradient(
+    83.09deg,
+    rgba(254, 138, 77, 0.85) 30.69%,
+    rgba(255, 207, 122, 0.85) 83.49%
+  );
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bg-hero-btn-aprilShowers {
+  background: linear-gradient(
+    83.09deg,
+    rgba(55, 74, 205, 0.85) 30.69%,
+    rgba(132, 147, 248, 0.85) 83.49%
+  );
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bg-hero-btn-joyfulMoments {
+  background: linear-gradient(
+    83.09deg,
+    rgba(241, 178, 72, 0.85) 30.69%,
+    rgba(250, 223, 118, 0.85) 83.49%
+  );
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 } */
-
-/* Rectangle 39 */
-
-/* position: absolute;
-width: 339.85px;
-height: 89.75px; */
-/* Rectangle 39 */
 
 .eventSelection {
-  margin-top: 75px;
+  margin-top: 3vh;
+  margin-top: 3dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +144,7 @@ height: 89.75px; */
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 
 .eventItem {
@@ -118,7 +161,8 @@ height: 89.75px; */
 .eventItemDescription {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  /* gap: 4px; */
+  gap: 0.9vh;
 }
 
 .eventName {
@@ -126,7 +170,8 @@ height: 89.75px; */
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.5vh;
+  /* line-height: 20px; */
   /* identical to box height, or 125% */
   letter-spacing: 0.15px;
   color: #2f2e36;
@@ -158,4 +203,16 @@ height: 89.75px; */
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  color: #8985a3;
+  /* margin-bottom: 1.5dvh; */
+}
+
+.margin-div {
+  margin-bottom: 15dvh;
+}
+
+@media only screen and (min-width: 540px) {
+  .eventItem {
+    align-self: center;
+  }
 }

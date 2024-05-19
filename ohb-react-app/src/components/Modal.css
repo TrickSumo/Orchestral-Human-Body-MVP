@@ -12,12 +12,14 @@
 }
 
 .modal {
-  padding: 15px;
-  margin-top: 15vh;
+  /* padding: 15px; */
+  padding: 4.5vh 3vw;
+  margin-top: 12vh;
+  margin-top: 12dvh;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 341px;
-  height: 466px;
+  width: 90vw;
+  /* height: 54vh; */
   position: absolute;
   color: #000;
   background: rgba(255, 255, 255, 0.8);

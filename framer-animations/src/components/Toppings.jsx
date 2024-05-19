@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const containerVarients = {
+const containerVariants = {
   hidden: {
     opacity: 0,
     x: "100vw",
@@ -29,7 +29,7 @@ const Toppings = ({ addTopping, pizza }) => {
       // initial={{ x: "100vw" }}
       // animate={{ x: "0" }}
       // transition={{ delay: 0.3 }}
-      variants={containerVarients}
+      variants={containerVariants}
       initial="hidden"
       animate="visible"
       className="toppings container"

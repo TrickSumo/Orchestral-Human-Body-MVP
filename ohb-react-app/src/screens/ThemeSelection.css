@@ -1,23 +1,27 @@
-* {
-  font-family: "Roboto";
-  font-style: normal;
-}
 .main-container {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   background: #112f2d;
-  opacity: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  /* background: rgba(17, 47, 45, 0.9); */
 }
+
+/* How To Convert Hex Color To Decimal=>
+
+Red: #11 in hex is 17 in decimal.
+Green: #2f in hex is 47 in decimal.
+Blue: #2d in hex is 45 in decimal.
+Alpha: The opacity 0.9 directly translates to the alpha value in rgba. */
 
 .title {
   font-size: 28px;
   font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-align: center;
   color: #ffffff;
-  padding: 20px 0px;
+  padding: 3dvh 0dvh;
+  width: 90dvw;
 }
 .cross-img {
   margin-right: 25px;
@@ -31,29 +35,53 @@
   border: none;
   background: transparent;
   color: #ffffff;
-}
-.para-text {
   font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
   letter-spacing: 0.02em;
   margin-top: 20px;
 }
+
 .label {
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.02em;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .tick-img {
-  float: right;
-  margin-right: 3px;
+  margin-top: 1.5dvh;
 }
 .lock-img {
-  float: right;
-  margin-right: 5px;
+  margin-top: 1.5dvh;
+}
+
+.theme-card {
+  color: #ffffff;
+  width: 90dvw;
+  /* height: 12dvh; */
+  padding: 3dvh 4.5dvw;
+  align-content: center;
+  border-radius: 22px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.theme-card-details {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-card-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .theme-card-heavenlyEssense {
@@ -62,47 +90,15 @@
     rgba(7, 142, 161, 0.85) 30.69%,
     rgba(119, 240, 223, 0.85) 83.49%
   );
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
 }
-
-.theme-card-greeExpedition {
+.theme-card-greenExpedition {
   background: linear-gradient(
     83.09deg,
     rgba(13, 158, 127, 0.85) 30.69%,
     rgba(91, 241, 177, 0.85) 83.49%
   );
-
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
 }
 .theme-card-magicWoodland {
   background: linear-gradient(
@@ -110,23 +106,7 @@
     rgba(233, 103, 98, 0.85) 30.69%,
     rgba(252, 186, 151, 0.85) 83.49%
   );
-
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
 }
 .theme-card-coreHarmony {
   background: linear-gradient(
@@ -134,23 +114,7 @@
     rgba(221, 66, 100, 0.85) 30.69%,
     rgba(251, 146, 158, 0.85) 83.49%
   );
-
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
 }
 .theme-card-findYourBliss {
   background: linear-gradient(
@@ -158,23 +122,7 @@
     rgba(254, 138, 77, 0.85) 30.69%,
     rgba(255, 207, 122, 0.85) 83.49%
   );
-
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
 }
 .theme-card-aprilShowers {
   background: linear-gradient(
@@ -182,23 +130,7 @@
     rgba(55, 74, 205, 0.85) 30.69%,
     rgba(132, 147, 248, 0.85) 83.49%
   );
-
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
 }
 .theme-card-joyfulMoments {
   background: linear-gradient(
@@ -206,33 +138,5 @@
     rgba(241, 178, 72, 0.85) 30.69%,
     rgba(250, 223, 118, 0.85) 83.49%
   );
-
-  color: #ffffff;
-  padding: 15px 10px 10px 20px;
-  margin-bottom: 12px;
-  align-content: center;
-  width: 339.58px;
-  height: 89.68px;
-  left: 50%;
-  transform: translateX(8%);
-  top: 3940.74px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  align-items: center;
-  letter-spacing: 0.02em;
-
-  /* color: #ffffff;
-  padding: 10px;
-  align-content: center;
-  width: 85%;
-  height: 89.68px;
-  border-radius: 15px;
-  left: 50%;
-  transform: translateX(9%);
-  top: 3940.74px;
-  margin-bottom: 20px; */
 }

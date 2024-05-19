@@ -1,10 +1,11 @@
 import React from "react";
 import "./BootMenu.css";
+import { synthDefBlobHeavenly } from "../utils/Constants";
 
 const BootMenu = ({ setIsSCServerBooted }) => {
   const bootSCServer = () => {
     try {
-      //Boot SC Server
+      // Boot SC Server
       var args = Module["arguments"];
       args[args.indexOf("-o") + 1] = "2";
       console.log(args[args.indexOf("-o") + 1]);

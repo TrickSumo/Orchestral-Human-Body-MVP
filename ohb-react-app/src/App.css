@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto";
+  font-style: normal;
 }
 
-.ttt-container {
+.root-container {
   background: linear-gradient(
       184.35deg,
       rgba(0, 0, 0, 0.08) 56.43%,
@@ -12,5 +14,5 @@
     ),
     url(../background_app.jpeg) no-repeat center center/cover
       /* url("../background_app.jpeg") no-repeat center center/cover */;
-  height: 100vh;
+  height: 100dvh;
 }

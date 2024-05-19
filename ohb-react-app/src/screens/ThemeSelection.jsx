@@ -2,83 +2,85 @@ import "./ThemeSelection.css";
 import tick from "../assets/img/tick.svg";
 import lock from "../assets/img/lock.svg";
 import cross from "../assets/img/cross.svg";
-import { useState } from "react";
 import themes from "../utils/Constants";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+const themeSelectionVariants = {
+  bottomToUp: {
+    y: ["100vh", 0],
+    opacity: [0, 1],
+    transition: {
+      type: "spring",
+      stiffness: 30,
+      duration: 0.3, // Increased duration for a more relaxing effect
+      ease: "easeInOut",
+      mass: 0.9,
+    },
+  },
+  fadeIn: {
+    opacity: [0, 1],
+    transition: {
+      duration: 0.1, // Increased duration for a smoother effect
+      ease: [0.42, 0, 0.58, 1], // Custom easing function for a relaxing effect
+    },
+  },
+  exitAnimation1: {
+    opacity: 0,
+    y: "100vh",
+    transition: {
+      stiffness: 20, // Lower stiffness for a more gentle animation
+      duration: 0.9, // Increased duration for a more relaxing effect
+      ease: "easeInOut", // Smooth easing for a relaxing effect
+      mass: 0.9,
+    },
+  },
+  exitAnimation2: {
+    opacity: 0,
+    transition: {
+      duration: 0.1, // Increased duration for a more relaxing effect
+      ease: "easeInOut",
+    },
+  },
+};
 
 const ThemeSelection = ({
   setView,
+  view,
   selectedTheme,
   setSelectedTheme,
   setLearnMoreTheme,
 }) => {
-  const [clickedIndex, setClickedIndex] = useState();
+  const [exitAnimation, setExitAnimation] = useState("exitAnimation1");
+
+  console.log("rendered ThemeSelection", view);
+
   const handleSelection = (theme, isLocked) => {
-    console.log(theme, isLocked);
     if (!isLocked) {
       setSelectedTheme(theme);
-      // setView("home");
+      setTimeout(() => {
+        handleExit("exitAnimation1", "home");
+      }, 300);
     }
   };
-  // const themes = {
-  //   heavenlyEssense: {
-  //     label: "Heavenly Essense",
-  //     description:
-  //       "Heavenly Essense lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  //   greeExpedition: {
-  //     label: "Green Expedition",
-  //     description:
-  //       "Green Expedition lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  //   magicWoodland: {
-  //     label: "Magic Woodland",
-  //     description:
-  //       "Magic Woodland lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  //   coreHarmony: {
-  //     label: "Core Harmony",
-  //     description:
-  //       "Core Harmony lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  //   findYourBliss: {
-  //     label: "Find Your Bliss",
-  //     description:
-  //       "Find Your Bliss lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  //   aprilShowers: {
-  //     label: "April Showers",
-  //     description:
-  //       "April Showers lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  //   joyfulMoments: {
-  //     label: "Joyful Moments",
-  //     description:
-  //       "Joyful Moments lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   },
-  // };
+
+  const handleExit = (animation, newView) => {
+    setExitAnimation(animation);
+    setTimeout(() => {
+      setView((prev) => ({
+        current: newView,
+        previous: prev.current,
+      }));
+    }, 300); // Match this duration with the exit transition duration
+  };
+
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: "100vh" }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 30,
-          duration: 0.3,
-          ease: "easeInOut",
-          mass: 0.9,
-        }}
-        exit={{
-          opacity: 0,
-          y: "100vh",
-          transition: {
-            stiffness: 30,
-            duration: 0.3,
-            ease: "easeInOut",
-            mass: 0.9,
-          },
-        }}
+        variants={themeSelectionVariants}
+        initial={{ opacity: 0 }}
+        animate={view.previous === "themeDescription" ? "fadeIn" : "bottomToUp"}
+        exit={themeSelectionVariants[exitAnimation]}
         className="main-container"
       >
         <div>
@@ -87,7 +89,7 @@ const ThemeSelection = ({
             <img
               className="cross-img"
               src={cross}
-              onClick={() => setView("home")}
+              onClick={() => handleExit("exitAnimation1", "home")}
             />
           </h1>
         </div>
@@ -96,32 +98,43 @@ const ThemeSelection = ({
           <div
             className="theme-container"
             key={index}
-            onClick={() => {
-              console.log("clicked");
-              handleSelection(theme, themes[theme].isLocked);
-            }}
+            onClick={() => handleSelection(theme, themes[theme].isLocked)}
           >
-            <div className={`theme-card-${theme} `}>
-              <div>
-                <h2 className="label">{themes[theme].label}</h2>
-                {theme === selectedTheme ? (
-                  <img className="tick-img" src={tick} />
-                ) : (
-                  themes[theme].isLocked && (
-                    <img className="lock-img" src={lock} />
-                  )
-                )}
+            <div className={`theme-card theme-card-${theme}`}>
+              <div className="theme-card-details">
+                <div className="theme-card-text">
+                  <h2 className="label">{themes[theme].label}</h2>
+                  <button
+                    className="learn-more-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                      setLearnMoreTheme(theme);
+                      handleExit("exitAnimation2", "themeDescription");
+                    }}
+                  >
+                    Learn more
+                  </button>
+                </div>
+
+                <div className="theme-card-icon">
+                  {theme === selectedTheme ? (
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1, transition: { duration: 1.5 } }}
+                      className="tick-img"
+                      src={tick}
+                    />
+                  ) : (
+                    themes[theme].isLocked && (
+                      <img className="lock-img" src={lock} />
+                    )
+                  )}
+                </div>
               </div>
-              <button
-                className="learn-more-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setView("themeDescription");
-                  setLearnMoreTheme(theme);
-                }}
-              >
-                <p className="para-text">Learn more</p>
-              </button>
             </div>
           </div>
         ))}

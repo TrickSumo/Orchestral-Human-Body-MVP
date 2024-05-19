@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const svgVarients = {
+const svgVariants = {
   hidden: {
     rotate: -180,
   },
@@ -12,7 +12,7 @@ const svgVarients = {
   },
 };
 
-const pathVarients = {
+const pathVariants = {
   hidden: {
     opacity: 0,
     pathLength: 0,
@@ -35,7 +35,7 @@ const Header = () => {
         className="logo"
       >
         <motion.svg
-          variants={svgVarients}
+          variants={svgVariants}
           initial="hidden"
           animate="visible"
           className="pizza-svg"
@@ -43,12 +43,12 @@ const Header = () => {
           viewBox="0 0 100 100"
         >
           <motion.path
-            variants={pathVarients}
+            variants={pathVariants}
             fill="none"
             d="M40 40 L80 40 C80 40 80 80 40 80 C40 80 0 80 0 40 C0 40 0 0 40 0Z"
           />
           <motion.path
-            variants={pathVarients}
+            variants={pathVariants}
             fill="none"
             d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
           />

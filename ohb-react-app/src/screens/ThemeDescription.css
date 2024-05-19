@@ -1,68 +1,54 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.theme-description-container {
+  min-height: 100dvh;
+  color: #fff;
+  padding: 6dvh 5.4dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5dvh;
+  overflow-x: hidden;
 }
-.Theme-container {
-  width: 389.69px;
-  height: 844px;
-}
-.goback-img {
-  margin: 20px;
-}
+
 .main-title {
-  font-family: "Roboto";
   font-size: 32px;
   font-weight: 700;
   line-height: 32px;
   letter-spacing: 0.02em;
-  text-align: left;
-
-  margin: 20px;
-  margin-top: 12px;
+  margin-left: 1.5dvw;
 }
-.title-content {
-  margin: 20px;
-  margin-top: 40px;
+
+.theme-description {
   font-family: Roboto;
   font-size: 15px;
-  font-weight: 250;
+  font-weight: 300;
   line-height: 15px;
   letter-spacing: 0.02em;
-  text-align: left;
+  margin-left: 1.5dvw;
 }
+
 .best-for-div {
-  margin-top: 15%;
+  margin-left: 1.5dvw;
+  margin-top: 4.5dvh;
 }
+
 .best-for {
-  margin: 20px;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 700;
   line-height: 15px;
   letter-spacing: 0.02em;
-  text-align: left;
 }
-.best-for-btn-one {
-  height: 31px;
-  top: 4194px;
-  left: -709px;
-  gap: 0px;
-  opacity: 0px;
-  background: #72cecd;
-  border: none;
-  border-radius: 15px;
 
+.best-for-btn-one {
+  height: 5dvh;
+  border: none;
+  border-radius: 25px;
   display: block;
-  margin: 15px;
-  font-family: Roboto;
+  margin: 1.8dvh 0dvh;
   font-size: 14px;
-  /* font-weight: 700; */
-  line-height: 14px;
+  line-height: 100%;
   letter-spacing: 0.02em;
-  text-align: center;
   color: #ffffff;
-  padding: 10px;
+  padding: 1.8dvh 1.8dvw;
 }
 
 .listen-with {
@@ -83,116 +69,57 @@
   margin-left: 0px;
 }
 .listen-with-para {
-  font-family: Roboto;
   font-size: 15px;
   font-weight: 250;
   line-height: 15px;
   letter-spacing: 0.02em;
-  text-align: left;
 }
 
-.label-container-1 {
+.bg-heavenlyEssense {
   background: linear-gradient(28.14deg, #078ea1 20.23%, #77f0df 79.09%);
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-
-  padding-left: 12px;
 }
-.btn-1 {
+.btn-heavenlyEssense {
   background: #72cecd;
 }
 
-.label-container-2 {
+.bg-greenExpedition {
   background: linear-gradient(28.14deg, #0d9e7f 21.23%, #5bf1b1 80.09%);
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-
-  padding-left: 12px;
 }
-.btn-2 {
+.btn-greenExpedition {
   background: rgba(91, 241, 177, 0.85) 83.49%;
 }
 
-.label-container-3 {
+.bg-magicWoodland {
   background: linear-gradient(28.14deg, #e96762 21.23%, #fcba97 80.35%);
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-
-  padding-left: 12px;
 }
-.btn-3 {
+.btn-magicWoodland {
   background: rgba(252, 186, 151, 0.85) 83.49%;
 }
 
-.label-container-4 {
+.bg-coreHarmony {
   background: linear-gradient(28.14deg, #dd4264 21.23%, #fb929e 80.35%);
-
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-
-  padding-left: 12px;
 }
-.btn-4 {
+.btn-coreHarmony {
   background: rgba(251, 146, 158, 0.85) 83.49%;
 }
-.label-container-5 {
-  /* background: linear-gradient(
-    83.09deg,
-    rgba(254, 138, 77, 0.85) 30.69%,
-    rgba(255, 207, 122, 0.85) 83.49%
-  ); */
 
+.bg-findYourBliss {
   background: linear-gradient(28.14deg, #fe8a4d 21.23%, #ffcf7a 80.35%);
-
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-
-  padding-left: 12px;
 }
-.btn-5 {
+.btn-findYourBliss {
   background: rgba(255, 207, 122, 0.85) 83.49%;
 }
-.label-container-6 {
-  /* background: linear-gradient(
-    83.09deg,
-    rgba(55, 74, 205, 0.85) 30.69%,
-    rgba(132, 147, 248, 0.85) 83.49%
-  ); */
-  background: linear-gradient(28.14deg, #374acd 21.23%, #8493f8 80.35%);
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
 
-  padding-left: 12px;
+.bg-aprilShowers {
+  background: linear-gradient(28.14deg, #374acd 21.23%, #8493f8 80.35%);
 }
-.btn-6 {
+.btn-aprilShowers {
   background: rgba(132, 147, 248, 0.85) 83.49%;
 }
-.label-container-7 {
-  /* background: linear-gradient(
-    83.09deg,
-    rgba(241, 178, 72, 0.85) 30.69%,
-    rgba(250, 223, 118, 0.85) 83.49%
-  ); */
-  background: linear-gradient(28.14deg, #f1b248 21.23%, #fadf76 80.35%);
-  padding-top: 50px;
-  height: 100vh;
-  position: relative;
-  color: #fff;
 
-  padding-left: 12px;
+.bg-joyfulMoments {
+  background: linear-gradient(28.14deg, #f1b248 21.23%, #fadf76 80.35%);
 }
-.btn-7 {
+.btn-joyfulMoments {
   background: rgba(242, 214, 103, 0.85) 83.49%;
 }
